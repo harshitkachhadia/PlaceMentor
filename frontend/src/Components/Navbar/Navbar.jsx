@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { assets } from '../../assets/assets';
 
-const pages = ['Resources', 'Experience', 'Discussion Forum'];
+const pages = ['Home','Resources', 'Experience', 'Discussion Forum'];
 const settings = ['Profile','Logout'];
 
 const Navbar = () => {
