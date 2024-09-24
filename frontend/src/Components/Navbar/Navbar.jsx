@@ -44,7 +44,7 @@ const Navbar = () => {
             alt="logo"
             style={{ height: '30px', width: '100x', marginRight: '10px' }}
           />
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex'} }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -69,11 +69,11 @@ const Navbar = () => {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{ display: { xs: 'block', md: 'none' } }}
+              sx={{ display: { xs: 'block', md: 'none' }}}
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                  <Typography sx={{ textAlign: 'center', fontSize:'1rem'}}>{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -83,7 +83,7 @@ const Navbar = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block',fontSize:'1rem' }}
               >
                 {page}
               </Button>

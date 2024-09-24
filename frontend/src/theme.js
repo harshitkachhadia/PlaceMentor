@@ -22,6 +22,7 @@ const theme = createTheme({
         },
     },
     typography: {
+        fontSize: '1rem',
         fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif', // Modern font family
         h1: {
             fontSize: '2.5rem',
