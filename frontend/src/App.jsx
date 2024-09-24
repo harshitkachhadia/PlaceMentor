@@ -1,14 +1,13 @@
-import { useState } from 'react'
-
+import React from 'react'
 import Navbar from './Components/Navbar/Navbar'
+import { Container } from '@mui/material'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <div className='app'>
-     <Navbar/>
-    </div>
+    <Container>
+      <Navbar></Navbar>
+    </Container>
+   
   )
 }
 
