@@ -1,7 +1,8 @@
 import React from 'react'
 import Header from '../../Components/Header/Header'
 import Features from '../../Components/Features/Features'
-import Testimonials from '../../Components/Testimonials/testimonials'
+import Testimonials from '../../Components/Testimonials/Testimonials'
+import Footer from '../../Components/Footer/Footer'
 
 
 
@@ -11,6 +12,7 @@ const Home = () => {
       <Header/>
       <Features/>
       <Testimonials/>
+      <Footer/>
     </div>
   )
 }
