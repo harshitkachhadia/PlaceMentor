@@ -6,6 +6,7 @@ import Home from './pages/Home/Home'
 const App = () => {
   return (
    <Container>
+    <Navbar/>
     <Home/>
    </Container>
    

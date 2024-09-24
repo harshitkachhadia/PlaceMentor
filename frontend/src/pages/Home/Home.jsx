@@ -1,12 +1,12 @@
 import React from 'react'
-import { Container } from '@mui/material'
-import Navbar from '../../Components/Navbar/Navbar'
-
+import Header from '../../Components/Header/Header'
+import Features from '../../Components/Features/Features'
 
 const Home = () => {
   return (
     <div className='home' id='home'>
-      <Navbar/>
+      <Header/>
+      <Features/>
     </div>
   )
 }

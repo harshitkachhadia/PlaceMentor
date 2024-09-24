@@ -3,17 +3,16 @@ import { red } from "@mui/material/colors";
 
 const theme = createTheme({
     palette: {
-        mode: 'dark', // Set to dark mode
         background: {
-            default: '#121212', // Dark background color
-            paper: '#1E1E1E', // Background color for cards/paper
+            default: '#121212',
+            paper: '#1E1E1E',
         },
         text: {
-            primary: '#FFFFFF', // Headings color
-            secondary: '#E0E0E0', // Body text color
+            primary: '#FFFFFF',
+            secondary: '#E0E0E0',
         },
         primary: {
-            main: '#00FFFF', // Your primary color
+            main: '#00FFFF',
         },
         secondary: {
             main: '#4A9FBD',
@@ -22,12 +21,43 @@ const theme = createTheme({
             main: red.A400,
         },
     },
+    typography: {
+        fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif', // Modern font family
+        h1: {
+            fontSize: '2.5rem',
+            fontWeight: 700,
+            lineHeight: 1.2,
+        },
+        h2: {
+            fontSize: '2rem',
+            fontWeight: 600,
+            lineHeight: 1.3,
+        },
+        h3: {
+            fontSize: '1.75rem',
+            fontWeight: 500,
+            lineHeight: 1.4,
+        },
+        body1: {
+            fontSize: '1rem',
+            fontWeight: 400,
+            lineHeight: 1.5,
+        },
+        body2: {
+            fontSize: '0.875rem',
+            fontWeight: 400,
+            lineHeight: 1.5,
+        },
+        button: {
+            textTransform: 'none', // Prevent uppercase transformation for buttons
+        },
+    },
     components: {
         MuiAppBar: {
             styleOverrides: {
                 root: {
-                    backgroundColor: 'transparent', // Set AppBar background to transparent
-                    boxShadow: 'none', // Remove shadow if necessary
+                    backgroundColor: 'transparent',
+                    boxShadow: 'none',
                 },
             },
         },

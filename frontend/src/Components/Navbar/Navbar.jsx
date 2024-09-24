@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { assets } from '../../assets/assets';
 
-const pages = ['Home','Resources', 'Experience', 'Discussion Forum'];
+const pages = ['Home','Resources', 'Experiences', 'Discussion Forum'];
 const settings = ['Profile','Logout'];
 
 const Navbar = () => {
@@ -36,9 +36,9 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{backgroundColor:'transparent',boxShadow: 'none', zIndex: 1100}}>
-      <Container maxWidth="xl" sx={{backgroundColor:'transparent',boxShadow: 'none', zIndex: 1100}} >
-        <Toolbar disableGutters>
+    <AppBar position="static">
+      <Container maxWidth="xl">
+        <Toolbar sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}  disableGutters>
           <img
             src={assets.logo}
             alt="logo"
