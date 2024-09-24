@@ -12,6 +12,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { assets } from '../../assets/assets';
+import { Link } from 'react-router-dom';
+
 
 const pages = ['Home','Resources', 'Experiences', 'Discussion Forum'];
 const settings = ['Profile','Logout'];
@@ -38,13 +40,13 @@ const Navbar = () => {
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
-        <Toolbar sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}  disableGutters>
+        <Toolbar sx={{ backgroundColor: 'transparent', boxShadow: 'none'}}  disableGutters>
           <img
             src={assets.logo}
             alt="logo"
-            style={{ height: '30px', width: '100x', marginRight: '10px' }}
+            style={{ height: '30px', marginRight: '10px' }}
           />
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' },justifyContent: 'flex-start' }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -73,17 +75,21 @@ const Navbar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                   <Typography component={Link} to={`/${page.toLowerCase().replace(/\s/g, '')}`} sx={{ textAlign: 'center', textDecoration: 'none', color: 'inherit' ,fontSize:'2rem'}}>
+                    {page}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } ,justifyContent: 'center'}}>
             {pages.map((page) => (
               <Button
                 key={page}
+                component={Link}
+                to={`/${page.toLowerCase().replace(/\s/g, '')}`}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block',fontSize:'1rem' }}
               >
                 {page}
               </Button>
@@ -92,8 +98,8 @@ const Navbar = () => {
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0,ml:2 }}>
+                <Avatar alt="Remy Sharp" src={assets.user} />
               </IconButton>
             </Tooltip>
             <Menu
