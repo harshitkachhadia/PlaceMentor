@@ -46,7 +46,7 @@ const Navbar = () => {
             alt="logo"
             style={{ height: '30px', marginRight: '10px' }}
           />
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' },justifyContent: 'flex-start' }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' },justifyContent: 'flex-end' }}>
           
             <IconButton
               size="large"
@@ -55,8 +55,9 @@ const Navbar = () => {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
+              sx={{marginRight:"-20px"}}
             >
-              <MenuIcon />
+              <MenuIcon sx={{color:"white",width:'100%',fontSize:"1.5rem"}}/>
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -79,7 +80,7 @@ const Navbar = () => {
                    <Typography component={Link} to={`/${page.toLowerCase().replace(/\s/g, '')}`} sx={{ textAlign: 'center', textDecoration: 'none', color: 'inherit' ,fontSize:'2rem'}}>
                     {page}
                   </Typography>
-                  <Typography sx={{ textAlign: 'center', fontSize:'1rem'}}>{page}</Typography>
+                 
                 </MenuItem>
               ))}
             </Menu>

@@ -7,21 +7,21 @@ import { assets } from "../../assets/assets";
 
 const testimonials = [
   {
-    name: "John Doe",
+    name: "Harshit Kachhadiya",
     review:
       "This product is amazing! It has changed the way I work and made me more productive. I highly recommend it to anyone looking to boost their productivity!",
     image: assets.testimonial, // Adjusted for a larger image
-    position: "Software Engineer",
+    position: "Associate Softwar Engineer",
   },
   {
-    name: "Jane Smith",
+    name: "Himanshu Makwana",
     review:
       "Great customer service and an even better product! Highly recommend to anyone. The team behind it is always there to help.",
     image: "https://via.placeholder.com/300", // Adjusted for a larger image
     position: "Project Manager",
   },
   {
-    name: "Alice Johnson",
+    name: "Krunal Vaishnav",
     review:
       "This is a must-have for anyone looking to streamline their workflow. It has saved me countless hours. It’s worth every penny!",
     image: "https://via.placeholder.com/300", // Adjusted for a larger image
@@ -33,7 +33,10 @@ const Testimonials = () => {
   const theme = useTheme(); // Access theme
 
   return (
-    <Container sx={{ py: 5 }}>
+    <Container >
+      <Typography variant="h3" gutterBottom color="primary" sx={{mb:"40px"}}>
+      What Our Users Are Saying
+            </Typography>
       <Carousel>
         {testimonials.map((testimonial, index) => (
           <TestimonialItem
