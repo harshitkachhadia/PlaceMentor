@@ -3,7 +3,7 @@ import Carousel from 'react-material-ui-carousel';
 import { Paper, Typography, Box, Container } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-// Example testimonials data
+
 const testimonials = [
     {
         name: "John Doe",
@@ -29,7 +29,7 @@ const Testimonials = () => {
     const theme = useTheme(); // Access theme
 
     return (
-        <Container sx={{ py: 5 }}>
+        <Container sx={{ py: 5 , }}>
             <Carousel>
                 {testimonials.map((testimonial, index) => (
                     <TestimonialItem key={index} testimonial={testimonial} theme={theme} />

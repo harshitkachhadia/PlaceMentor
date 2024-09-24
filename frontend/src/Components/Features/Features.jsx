@@ -25,8 +25,8 @@ const Features = () => {
     ];
 
     return (
-        <Box sx={{ my: 5, backgroundColor: '#1E1E1E', padding: 4, borderRadius: 2 }}>
-            <Typography variant="h3" gutterBottom color="primary" sx={{mb:"25px"}}>
+        <Box sx={{ my: 5, padding: 4, borderRadius: 2 }}>
+            <Typography variant="h3" gutterBottom color="primary" sx={{mb:"40px"}}>
                 What PlaceMentor Offers You
             </Typography>
             <Grid container spacing={4} justifyContent="center">
@@ -58,7 +58,7 @@ const Features = () => {
                             
                             {/* Content Section */}
                             <Box sx={{ padding: 3, flexGrow: 1 }}>
-                                <Typography variant="h6" gutterBottom color="white">{feature.title}</Typography>
+                                <Typography variant="h4" gutterBottom color="white">{feature.title}</Typography>
                                 <Typography variant="body2" color="gray">{feature.description}</Typography>
                             </Box>
 
