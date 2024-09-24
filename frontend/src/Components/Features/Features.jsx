@@ -65,7 +65,7 @@ const Features = () => {
                             {/* Learn More Button */}
                             <Box sx={{ padding: 2, textAlign: 'center' }}>
                                 <Button 
-                                    variant="contained" 
+                                    variant="outlined" 
                                     color="primary" 
                                     href={feature.link}
                                     sx={{ width: '100%' }}
