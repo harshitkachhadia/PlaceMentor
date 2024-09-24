@@ -4,7 +4,7 @@ import { Paper, Typography, Box, Container } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { assets } from "../../assets/assets";
 
-// Example testimonials data
+
 const testimonials = [
   {
     name: "John Doe",
