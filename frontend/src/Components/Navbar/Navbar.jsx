@@ -47,6 +47,7 @@ const Navbar = () => {
             style={{ height: '30px', marginRight: '10px' }}
           />
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' },justifyContent: 'flex-start' }}>
+          
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -71,13 +72,14 @@ const Navbar = () => {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{ display: { xs: 'block', md: 'none' } }}
+              sx={{ display: { xs: 'block', md: 'none' }}}
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                    <Typography component={Link} to={`/${page.toLowerCase().replace(/\s/g, '')}`} sx={{ textAlign: 'center', textDecoration: 'none', color: 'inherit' ,fontSize:'2rem'}}>
                     {page}
                   </Typography>
+                  <Typography sx={{ textAlign: 'center', fontSize:'1rem'}}>{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
