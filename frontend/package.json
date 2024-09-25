@@ -10,14 +10,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@date-io/date-fns": "^3.0.0",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.1.1",
     "@mui/material": "^6.1.1",
     "@mui/styled-engine-sc": "^6.1.1",
+    "@mui/x-date-pickers": "^7.18.0",
+    "date-fns": "^3.6.0",
+    "html-react-parser": "^5.1.16",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-material-ui-carousel": "^3.4.2",
+    "react-quill": "^2.0.0",
     "react-router-dom": "^6.26.2",
     "styled-components": "^6.1.13"
   },

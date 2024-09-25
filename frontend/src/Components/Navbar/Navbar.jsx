@@ -45,6 +45,8 @@ const Navbar = () => {
             src={assets.logo}
             alt="logo"
             style={{ height: '30px', marginRight: '10px' }}
+            
+
           />
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' },justifyContent: 'flex-end' }}>
           
