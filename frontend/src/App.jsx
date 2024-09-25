@@ -4,6 +4,7 @@ import { Container } from "@mui/material";
 import Home from "./pages/Home/Home";
 import { Route, Routes } from "react-router-dom";
 import Experiences from "./Pages/Experiences/Experiences";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/Experiance" element={<Experiences/>}/>
       </Routes>
+      <Footer/>
     </Container>
   );
 };
