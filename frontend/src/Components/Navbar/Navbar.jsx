@@ -41,11 +41,13 @@ const Navbar = () => {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar sx={{ backgroundColor: 'transparent', boxShadow: 'none'}}  disableGutters>
-          <img
+         <Link to="/home"> 
+         <img
             src={assets.logo}
             alt="logo"
-            style={{ height: '30px', marginRight: '10px' }}
+            style={{ height: '30px', marginRight: '10px' }}          
           />
+         </Link>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' },justifyContent: 'flex-end' }}>
           
             <IconButton
