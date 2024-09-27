@@ -3,8 +3,9 @@ import Navbar from "./Components/Navbar/Navbar";
 import { Container } from "@mui/material";
 import Home from "./pages/Home/Home";
 import { Route, Routes } from "react-router-dom";
-import Experiences from "./Pages/Experiences/Experiences";
 import Footer from "./Components/Footer/Footer";
+import Resources from "./pages/Resources/Resources";
+import PlacementInsights from "./pages/PlacementInsights/PlacementInsights";
 
 const App = () => {
   return (
@@ -12,8 +13,8 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/home" element={<Home />} />
-        <Route path="/experiences" element={<Experiences/>}/>
-
+        <Route path="/placementInsights" element={<PlacementInsights/>}/>
+        <Route path="/resources" element={<Resources/>}/>
       </Routes>
       <Footer/>
     </Container>

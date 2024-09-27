@@ -23,40 +23,8 @@ const theme = createTheme({
     },
     typography: {
         fontSize: '1rem',
-        fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif', // Modern font family
-        h1: {
-            fontSize: '2.5rem',
-            fontWeight: 700,
-            lineHeight: 1.2,
-        },
-        h2: {
-            fontSize: '2rem',
-            fontWeight: 600,
-            lineHeight: 1.3,
-        },
-        h3: {
-            fontSize: '1.6rem',
-            fontWeight: 500,
-            lineHeight: 1.4,
-        },
-        h4: {
-            fontSize: '1.3rem',
-            fontWeight: 500,
-            lineHeight: 1.4,
-        },
-        body1: {
-            fontSize: '1rem',
-            fontWeight: 400,
-            lineHeight: 1.5,
-        },
-        body2: {
-            fontSize: '0.875rem',
-            fontWeight: 400,
-            lineHeight: 1.5,
-        },
-        button: {
-            textTransform: 'none', // Prevent uppercase transformation for buttons
-        },
+        fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+        
     },
     components: {
         MuiAppBar: {
@@ -67,6 +35,29 @@ const theme = createTheme({
                 },
             },
         },
+        MuiOutlinedInput: {
+            styleOverrides: {
+                root: {
+                    '& .MuiOutlinedInput-notchedOutline': {
+                        borderColor: '#E0E0E0', // Color of the outline when not focused
+                    },
+                    '&:hover .MuiOutlinedInput-notchedOutline': {
+                        borderColor: '#00FFFF', // Color of the outline when hovered
+                    },
+                    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                        borderColor: '#00FFFF', // Color of the outline when focused
+                    },
+                },
+            },
+        },
+        MuiTableRow: {
+            styleOverrides: {
+              hover: {
+                cursor: "pointer",
+                backgroundColor:'red'
+              }
+            }
+          }
     },
 });
 
