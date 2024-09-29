@@ -16,6 +16,9 @@
 - **Add Experience**:  
   A simple form for students to add their own placement experiences, contributing to the community.
 
+- **Resource Page**:  
+  A page that provides various resources related to campus placements, including interview preparation, resume building, and coding platforms.
+
 ## Pages
 
 1. **Placement Insights**:
@@ -27,10 +30,33 @@
    - Lists job and internship opportunities.
    - Fetches dynamic data from the GitHub Jobs API.
 
-3. **Home**:
-   - Welcome page with useful resources and animations (powered by Three.js).
+3. **Resources**:
+   - Provides links and resources for campus placement preparation, including articles, books, and websites for coding, aptitude, and interview prep.
+
+4. **Home**:
+   - Welcome page with useful resources and user reviews.
 
 ## Technologies Used
 
 - **Frontend**: React.js with Material UI
-- **Backend**: GitHub Jobs API (for job listings
+- **Backend**: Express.js, Node.js
+- **Database**: MongoDB
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/placeMentor.git
+2. Navigate to the project directory:
+   
+   ```bash
+   cd placeMentor
+3. Install dependencies:
+   
+   ```bash
+   npm install
+4. Start the development server:
+   
+   ```bash
+   npm start
