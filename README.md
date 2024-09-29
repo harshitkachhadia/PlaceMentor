@@ -1,6 +1,6 @@
 # placeMentor
 
-**placeMentor** is a web application designed to assist students in navigating campus placements by providing job and internship opportunities, along with the ability to share and view personal placement experiences. The app features a user-friendly interface built using React.js with Material UI for styling and supports dynamic job listings fetched from the GitHub Jobs API.
+**placeMentor** is a web application designed to assist students in navigating campus placements by providing job and internship opportunities, along with the ability to share and view personal placement experiences. The app features a user-friendly interface built using React.js with Material UI for styling and supports dynamic job listings fetched from the obs API.
 
 ## Features
 
