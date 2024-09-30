@@ -41,9 +41,9 @@ const Resources = () => {
       {/* App Bar */}
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h3" gutterBottom color="primary" sx={{ marginTop: "50px" }}>
-            Resources
-          </Typography>
+        <Typography variant="h3" style={{ fontWeight: 'bold', fontSize: '1.5rem', color: '#FFFFFF',margin:'2rem 0 1rem 0'}}>
+          Resources
+        </Typography>
         </Toolbar>
       </AppBar>
 
@@ -108,8 +108,8 @@ const Resources = () => {
 
       {/* Practice Section */}
       <Box padding="20px">
-        <Typography variant="h3" gutterBottom color="primary" sx={{ mb: "40px" }}>
-          Coding Practice Platforms
+      <Typography variant="h3" style={{ fontWeight: 'bold', fontSize: '1.5rem', color: '#FFFFFF',margin:'2rem 0 2rem 0' }}>
+      Coding Practice Platforms
         </Typography>
         <Box display="flex" gap="20px" alignItems="center">
           {/* HackerRank */}
