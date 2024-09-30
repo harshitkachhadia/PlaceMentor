@@ -15,7 +15,7 @@ import { assets } from '../../assets/assets';
 import { Link } from 'react-router-dom';
 
 
-const pages = ['Home','Resources', 'Placement Insights', 'Discussion Forum'];
+const pages = ['Home','Resources', 'Placement Insights', 'Opportunities'];
 const settings = ['Profile','Logout'];
 
 const Navbar = () => {
