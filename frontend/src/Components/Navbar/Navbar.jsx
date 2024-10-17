@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom';
 const pages = ['Home','Resources', 'Placement Insights', 'Opportunities'];
 const settings = ['Profile','Logout'];
 
-const Navbar = () => {
+const Navbar = ({setShowLogin}) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -41,7 +41,7 @@ const Navbar = () => {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar sx={{ backgroundColor: 'transparent', boxShadow: 'none'}}  disableGutters>
-         <Link to="/home"> 
+         <Link to="/"> 
          <img
             src={assets.logo}
             alt="logo"
@@ -96,7 +96,7 @@ const Navbar = () => {
                 component={Link}
                 to={`/${page.toLowerCase().replace(/\s/g, '')}`}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block',fontSize:'1rem' }}
+                sx={{ my: 2, color: 'white', display: 'block',fontSize:'0.9rem' }}
               >
                 {page}
               </Button>
@@ -104,6 +104,9 @@ const Navbar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
+          <Button onClick={()=>setShowLogin(true)} variant="contained" color="primary" sx={{ margin: '0 10px' }}>
+                    Sign In
+                </Button>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0,ml:2 }}>
                 <Avatar alt="Remy Sharp" src={assets.user} />
