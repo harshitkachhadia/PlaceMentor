@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState,useEffect,useContext } from "react";
 import {
   Box,
   TextField,
@@ -12,10 +12,50 @@ import {
   DialogContent,
   DialogActions,
 } from "@mui/material";
+import { StoreContext } from "../../context/storeContext";
+import axios from "axios";
 
 const LoginSignUp = ({ setShowLogin }) => {
 
+  const {url,setToken} = useContext(StoreContext)
   const [currentState, setCuurentState] = useState("Sign up");
+  const [data,setData] = useState({
+    name:"",
+    email:"",
+    password:""
+  })
+
+  const onChangeHandler = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setData(data => ({...data,[name]:value}))
+  }
+
+  // useEffect(() => {
+  //   console.log(data);
+  // },[data])
+
+  const onLogin = async (e) => {
+    e.preventDefault()
+    let newUrl = url;
+    if (currentState === "Login") {
+      newUrl += "/api/user/login"
+    }
+    else{
+      newUrl += "/api/user/register"
+    }
+
+    const respose = await axios.post(newUrl,data)
+    if (respose.data.success) {
+      // console.log(respose.data.token);
+      setToken(respose.data.token);
+      localStorage.setItem("token",respose.data.token);
+      setShowLogin(false)
+    }
+    else{
+      alert(respose.data.message)
+    }
+  }
 
   return (
     <Dialog open={true} onClose={() => setShowLogin(false)} maxWidth="xs" fullWidth>
@@ -23,7 +63,7 @@ const LoginSignUp = ({ setShowLogin }) => {
         {currentState}
       </DialogTitle>
       <DialogContent sx={{ backgroundColor: "#1E1E1E" }}>
-        <Box component="form">
+        <Box component="form" onSubmit={onLogin}>
           {currentState === "Login" 
           ? (<></>) 
           : (
@@ -34,6 +74,8 @@ const LoginSignUp = ({ setShowLogin }) => {
               id="name"
               label="Full Name"
               name="name"
+              onChange={onChangeHandler}
+              value={data.name}
               autoComplete="name"
               autoFocus
               variant="outlined"
@@ -49,6 +91,8 @@ const LoginSignUp = ({ setShowLogin }) => {
             id="email"
             label="Email Address"
             name="email"
+            onChange={onChangeHandler}
+            value={data.email}
             autoComplete="email"
             autoFocus
             variant="outlined"
@@ -60,6 +104,8 @@ const LoginSignUp = ({ setShowLogin }) => {
             required
             fullWidth
             name="password"
+            onChange={onChangeHandler}
+            value={data.password}
             label="Password"
             type="password"
             id="password"
