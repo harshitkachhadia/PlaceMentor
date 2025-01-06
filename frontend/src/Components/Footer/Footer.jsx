@@ -75,7 +75,7 @@ const Footer = () => {
             <li style={{
               marginBottom: '0.5rem', 
             }}>
-              <a href="/experiences" style={{
+              <a href="/placementInsights" style={{
                 color: '#FFFFFF',
                 fontSize: '1.2rem', 
               }}>
@@ -83,7 +83,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="/forum" style={{
+              <a href="/oppturnities" style={{
                 color: '#FFFFFF',
                 fontSize: '1.2rem', 
               }}>
