@@ -120,7 +120,7 @@ const LoginSignUp = ({ setShowLogin }) => {
             variant="contained"
             sx={{ mt: 3, mb: 2, backgroundColor: "#00FFFF", color: "#000000" }}
           >
-            {currentState === "Sign up" ? "Create account" : "Login"}
+            {currentState === "Signup" ? "Create account" : "Login"}
           </Button>
           <Grid container>
             <Grid item>

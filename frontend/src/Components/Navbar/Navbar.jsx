@@ -12,7 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { assets } from "../../assets/assets";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../context/storeContext";
 
 const pages = ["Home", "Resources", "Placement Insights", "Opportunities"];
@@ -21,6 +21,8 @@ const Navbar = ({ setShowLogin }) => {
   const { token, setToken } = React.useContext(StoreContext);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const navigate = useNavigate();
+  
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -36,6 +38,17 @@ const Navbar = ({ setShowLogin }) => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+const handleProfile = () => {
+  navigate("/profile")
+}
+
+  const handleLogOut = () => {
+    console.log("sdfghj")
+    setToken("")
+    localStorage.removeItem("token")
+    
+  }
 
   return (
     <AppBar position="static">
@@ -168,10 +181,10 @@ const Navbar = ({ setShowLogin }) => {
                     width: "100%",
                   }}
                 >
-                  <Typography sx={{ textAlign: "center", padding: "4px 0" }}>
+                  <Typography onClick={handleProfile}  sx={{ textAlign: "center", padding: "4px 0" }}>
                     Profile
                   </Typography>
-                  <Typography sx={{ textAlign: "center", padding: "4px 0" }}>
+                  <Typography onClick={handleLogOut} sx={{ textAlign: "center", padding: "4px 0" }}>
                     Log out
                   </Typography>
                 </Box>
