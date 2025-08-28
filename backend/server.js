@@ -26,10 +26,12 @@ app.use("/api/user",userRouter)
 app.use("/api/placementInsight",placementInsightRoute)
 app.use("/api/Profile",userProfile)
 
+// Health Checking route 
 app.get("/",(req,res) => {
-    res.send("working")
+    return res.json({message: "PlaceMentor API Service is running!"})
 })
 
+// Database Connection 
 connect()
 .then(() => {
     app.listen(port,() => {
@@ -37,8 +39,7 @@ connect()
     })
 })
 .catch((error) => {
-    console.log("ERROR : ",error.message);
-    
+    console.log("ERROR : ",error.message);    
 })
 
 // app.listen(port,() => {
